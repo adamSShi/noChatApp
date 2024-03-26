@@ -3,12 +3,10 @@ const app = express();
 const http = require("http");
 const server = http.createServer(app);
 const port = 443;
-const ip = "https://adamshii.com";
-//192.168.1.205
+const ip = "https://localhost";
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
-// 客户端 JavaScript 代码
 app.get("/app.js", (req, res) => {
   res.sendFile(__dirname + "/app.js");
 });
